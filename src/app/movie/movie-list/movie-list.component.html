@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-12 col-md-7 mr-auto ">
+        <mat-form-field class="mr-3">
+            <mat-label>Choose genre:</mat-label>
+            <select matNativeControl [(ngModel)]="genresFilter">
+                  <option value="All">All</option>
+                  <option value="Action">Action</option>
+                  <option value="Fantasy">Fantasy</option>
+                  <option value="Adventure">Adventure</option>
+                  <option value="Sci-Fi">Sci-Fi</option>
+                </select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Sort:</mat-label>
+            <select matNativeControl [(ngModel)]="sortMovie">
+                <option value="budget">Budget</option>
+                <option value="content_rating">Content rating</option>
+                <option value="title_year">Year</option>
+              </select>
+        </mat-form-field>
+    </div>
+    <div class="col-12 col-md-5 ml-auto">
+        <div class="form-group">
+            <input type="search" class="form-control" placeholder="Search by name" [(ngModel)]="term">
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div *ngFor="let movie of movies | search_filter:term | genres_filter: genresFilter | sort_filter:'desc': sortMovie; let i = index" class="col col-md-6">
+        <app-movie [movie]="movie"></app-movie>
+    </div>
+</div>
+
+
+
+<!-- [i]="i" -->
