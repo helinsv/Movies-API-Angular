@@ -10,13 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { PaGenresFilterPipe } from './genresFilter.pipe';
 
 @NgModule({
   declarations: [
     MovieComponent,
     MovieListComponent,
-
+    PaGenresFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,19 @@
 <div class="row">
+    <div class="col-12 col-md-7 mr-auto ">
+        <mat-form-field class="mr-3">
+            <mat-label>Choose genre:</mat-label>
+            <select matNativeControl required [(ngModel)]="genresFilter">
+                  <option value="All">All</option>
+                  <option value="Action">Action</option>
+                  <option value="Fantasy">Fantasy</option>
+                  <option value="Adventure">Adventure</option>
+                  <option value="Sci-Fi">Sci-Fi</option>
+                </select>
+        </mat-form-field>
 
 
-    <div class="col-12  ml-auto">
+    </div>
+    <div class="col-12 col-md-5 ml-auto">
         <div class="form-group">
             <input type="search" class="form-control" placeholder="Search Here" [(ngModel)]="term">
         </div>
@@ -9,7 +21,7 @@
 </div>
 
 <div class="row">
-    <div *ngFor="let movie of movies | filter:term ; let i = index" class="col col-md-6">
+    <div *ngFor="let movie of movies | filter:term | genres_filter: genresFilter; let i = index" class="col col-md-6">
         <app-movie [movie]="movie"></app-movie>
     </div>
 </div>
