@@ -1,5 +1,15 @@
 <div class="row">
-    <div *ngFor="let movie of movies; let i = index" class="col col-md-6">
+
+
+    <div class="col-12  ml-auto">
+        <div class="form-group">
+            <input type="search" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let movie of movies | filter:term ; let i = index" class="col col-md-6">
         <app-movie [movie]="movie"></app-movie>
     </div>
 </div>
