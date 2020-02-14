@@ -11,12 +11,14 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PaGenresFilterPipe } from './genresFilter.pipe';
+import { SortPipe } from './movie-sort-filter.pipe';
 
 @NgModule({
   declarations: [
     MovieComponent,
     MovieListComponent,
-    PaGenresFilterPipe
+    PaGenresFilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
