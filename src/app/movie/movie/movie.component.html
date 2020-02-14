@@ -1,0 +1,18 @@
+<mat-card>
+    <div class="eventDataContainer">
+        <h1 [ngClass]="{redTitle: movie.budget > 40000000000}">{{movie.movie_title | uppercase}}</h1>
+        <ul>
+            <li><b>Director name:</b> {{movie.director_name }}</li>
+            <li><b>Actors:</b> {{movie.actor_1_name}}, {{movie.actor_2_name}}</li>
+            <li><b>Genres:</b> {{movie.genres}}</li>
+            <li><b>Language:</b> {{movie.language}}</li>
+            <li><b>Country:</b> {{movie.country}}</li>
+            <li><b>Content rating:</b> {{movie.content_rating}}</li>
+            <li><b>Budget:</b> {{movie.budget}}</li>
+            <li><b>Year:</b> {{movie.title_year}}</li>
+            <li><b>Plot keywords:</b> {{movie.plot_keywords}}</li>
+            <li><b><a [href]="movie.movie_imdb_link">IMDB link</a></b> </li>
+        </ul>
+    </div>
+    <div class="overlay"></div>
+</mat-card>
