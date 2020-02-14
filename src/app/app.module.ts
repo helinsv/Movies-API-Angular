@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MovieModule } from './movie/movie-module';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MovieService } from '../app/movie.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ]),
     MovieModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,21 +9,21 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PaGenresFilterPipe } from './genresFilter.pipe';
 import { SortPipe } from './movie-sort-filter.pipe';
+import { SearchPipe } from './movie-search.pipe';
 
 @NgModule({
   declarations: [
     MovieComponent,
     MovieListComponent,
     PaGenresFilterPipe,
-    SortPipe
+    SortPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    Ng2SearchPipeModule,
     RouterModule.forRoot([{
       path: 'home', component: MovieListComponent
     }

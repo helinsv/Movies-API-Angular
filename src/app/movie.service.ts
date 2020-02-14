@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Movie} from './Movie';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { BehaviorSubject } from 'rxjs';
 import { environment } from '../environments/environment';
 import { map } from 'rxjs/operators';
 
@@ -11,7 +10,6 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MovieService {
-  movies$ = new BehaviorSubject({ loading: true, data: []});
 
   constructor(private http: HttpClient) { }
 

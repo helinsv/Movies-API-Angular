@@ -11,16 +11,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class MovieListComponent implements OnInit {
 
   movies: Movie[];
-  movieTypeDropdownOpen = false;
-  currentMovieTypeFilters = [];
-  currentSearch = '';
-  movies$ = this.movieService.movies$;
   //i: number;
 
   constructor(
-    private movieService: MovieService,
-    private router: Router,
-    private route: ActivatedRoute
+    private movieService: MovieService
     ) { }
 
   ngOnInit() {
